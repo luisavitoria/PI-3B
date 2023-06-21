@@ -4,12 +4,10 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { initializeApp } from '@firebase/app';
-import { getFirestore } from "firebase/firestore";
 import { firebaseConfig } from './src/config/firebase-config';
 import { HouseSimple, User, PlusCircle } from 'phosphor-react-native';
 
 import { Provider as AuthProvider, Context as AuthContext } from './src/context/AuthContext'
-// import { Provider as PostProvider, Context as PostContext, } from './src/context/PostContext'
 import Login from './src/screens/Login'
 import SignUp from './src/screens/SignUp';
 import Home from './src/screens/Home';
@@ -67,12 +65,6 @@ function App() {
               tabBarActiveTintColor: THEME.COLORS.PRIMARY,
             })}
           >
-            {/* <Tab.Screen name="MainNavigator" component={MainNavigator} options={{
-              unmountOnBlur: true,
-            }} /> */}
-            {/* { <Tab.Screen name="Friends" component={Friends} options={{
-              unmountOnBlur: true,
-            }} /> */}
 
             <Tab.Screen name='MainNavigator' component={MainNavigator} options={{
               unmountOnBlur: true,
